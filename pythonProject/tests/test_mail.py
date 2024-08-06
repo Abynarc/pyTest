@@ -1,10 +1,11 @@
 import pytest
-@pytest.fixture()
 
+@pytest.fixture
 def set_up():
     print('Авторизация выполнена')
-def send_mail_1():
+
+def test_send_mail_1(set_up):
     print('Письмо отправлено')
 
-def send_mail_2():
+def test_send_mail_2(set_up):
     print('Второе письмо отправлено')
