@@ -7,8 +7,8 @@ def set_up():
     yield
     print('Выход из системы')
 
-@pytest.fixture
-def set_up():
+@pytest.fixture(scope='module')
+def some():
     print('Начало')
     yield
     print('Конец')
